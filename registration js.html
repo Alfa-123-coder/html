@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Form validation</title>
+<style>
+body{
+background-color:pink;
+color:purple;
+font-family:arial,sans=serif;
+}
+</style>
+</head>
+<body>
+<h3>Form Validation</h3>
+<form onsubmits="return validationform()">
+Name:<br>
+<input type="text"id="name"><br>
+Email:<br><input type="text" id="email"><br>
+Password:<br>
+<input type"password"id="password"><br>
+Confirm password:<br>
+<input type="password"id="confirm"><br><br>
+<input type="reset"value="reset">
+<input type="submit" value="submit">
+</form>
+<script>
+function validation form(){
+var name=document.getElementById("name").value.trim();
+var email=document.getElementById("email").value.trim();
+var password=document.getElementById("password").value.trim();
+var confirm=document.getElementById("confirm").value.trim();
+if(name==""||email==""||password==""||confirm=="")
+alert("please fill all fields");
+return false;
+}
+if(email.indexof("0")==-1||email.index(".")==-1){
+alert("enter a void email address");
+return false;
+}
+alert("form submitted successfully!");
+}
+</script>
+</body>
+</html>
