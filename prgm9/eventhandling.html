@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Mouseover Event Example</title>
+    <style>
+        #content {
+            width: 300px;
+            padding: 15px;
+            border: 2px solid #333;
+            text-align: center;
+            cursor: pointer;
+        }
+        img {
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="content">
+    <h2 id="text">Hover over this area!</h2>
+    <img id="image" src="https://via.placeholder.com/250x150?text=Default+Image">
+</div>
+
+<script>
+    
+    const content = document.getElementById("content");
+    const text = document.getElementById("text");
+    const image = document.getElementById("image");
+
+   
+    content.addEventListener("mouseover", function () {
+        text.textContent = "Mouse is over the content!";
+        image.src = "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSxe6Nc-BJ5qHjWbW9Ca8dENmEahagpWquofAXSo33j7DP9Z57My63LGvy39TWs1WrQag1ObmNofcuOYblPQrPkpdPV46njvrrbYn-13-0s3GSputslMMmw";
+    });
+
+ 
+    content.addEventListener("mouseout", function () {
+        text.textContent = "Hover over this area!";
+        image.src = "https://d3cif2hu95s88v.cloudfront.net/live-site-2016/product-image/27thDec/pink-comboa-600x600.JPG";
+    });
+</script>
+</body>
+</html>
+
